@@ -2,17 +2,11 @@ import React from 'react';
 
 import { FacebookShareButton, FacebookIcon } from 'react-share';
 
-const FbShareBtn = ({ url }) => {
+const FbShareBtn = ({ url, quote, description }) => {
   const encodedURL = url;
 
   return (
-    <FacebookShareButton
-      url={url}
-      quote={'test'}
-      hashtag={'#hashtag'}
-      description={'test-share'}
-      className=''
-    >
+    <FacebookShareButton url={url} quote={quote} description={description} className=''>
       <FacebookIcon size={32} round />
     </FacebookShareButton>
   );

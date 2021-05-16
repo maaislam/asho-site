@@ -8,17 +8,23 @@ import Programs from '../components/Programs';
 import Sectionheader from '../components/Sectionheader';
 
 const Home = ({ programList, blogList }) => {
-  console.log('🚀 ~ file: index.js ~ line 11 ~ Home ~ blogList', blogList);
   return (
     <div>
       <div className='main mb-140'>
-        <Sectionheader />
+        <Sectionheader
+          heading1='Programs we regularly maintain.'
+          heading2='What care we do for the less fortunate'
+        />
         <Programs programList={programList} />
       </div>
       <div className='main mb-140'>
         <CountUpPanel />
       </div>
       <div className='main mb-140'>
+        <Sectionheader
+          heading1='Latest newsfeed.'
+          heading2='Popular blog post we updated'
+        />
         <FeedList blogItem={blogList} />
       </div>
     </div>
@@ -33,7 +39,6 @@ export const getStaticProps = async () => {
   const res2 = await fetch('http://articlestore.local/wp-json/asho/v1/articles');
 
   const blogList = await res2.json();
-  console.log('🚀 ~ file: index.js ~ line 36 ~ getStaticProps ~ blogList', blogList);
 
   return {
     props: {

@@ -1,6 +1,3 @@
-import React from 'react';
-
-import RightArrow from '../public/assets/RightArrow.js';
 import LearnMore from './Button/LearnMore.js';
 
 const Programs = ({ programList }) => {
@@ -13,7 +10,7 @@ const Programs = ({ programList }) => {
         <img src={item.img_url.medium} alt={item.title} />
         <h5 className='text-text font-semibold'>{item.title}</h5>
         <p className='text-headingSecondary text-14'>{item.short_desc}</p>
-        <LearnMore slug={item.slug} id={item.id} />
+        <LearnMore page='program' slug={item.slug} id={item.id} />
       </div>
     );
   });
