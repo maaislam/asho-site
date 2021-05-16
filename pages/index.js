@@ -26,11 +26,11 @@ const Home = ({ programList, blogList }) => {
 };
 
 export const getStaticProps = async () => {
-  const res1 = await fetch('http://articlestore.local/wp-json/asho/v1/programs');
+  const res1 = await fetch('http://22b3332e1613.ngrok.io/wp-json/asho/v1/programs');
 
   const programList = await res1.json();
 
-  const res2 = await fetch('http://articlestore.local/wp-json/asho/v1/articles');
+  const res2 = await fetch('http://22b3332e1613.ngrok.io/wp-json/asho/v1/articles');
 
   const blogList = await res2.json();
   console.log('🚀 ~ file: index.js ~ line 36 ~ getStaticProps ~ blogList', blogList);
