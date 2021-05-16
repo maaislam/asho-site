@@ -1,12 +1,20 @@
 import React from 'react';
 
+import { FacebookShareButton, FacebookIcon } from 'react-share';
+
 const FbShareBtn = ({ url }) => {
-  const encodedURL = encodeURI(url);
+  const encodedURL = url;
 
   return (
-    <div>
-      <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodedURL}`}>Share</a>
-    </div>
+    <FacebookShareButton
+      url={url}
+      quote={'test'}
+      hashtag={'#hashtag'}
+      description={'test-share'}
+      className=''
+    >
+      <FacebookIcon size={32} round />
+    </FacebookShareButton>
   );
 };
 

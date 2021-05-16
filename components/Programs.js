@@ -1,7 +1,7 @@
 import React from 'react';
-import Link from 'next/link';
 
 import RightArrow from '../public/assets/RightArrow.js';
+import LearnMore from './Button/LearnMore.js';
 
 const Programs = ({ programList }) => {
   const renderPrograms = programList.map((item) => {
@@ -13,16 +13,7 @@ const Programs = ({ programList }) => {
         <img src={item.img_url.medium} alt={item.title} />
         <h5 className='text-text font-semibold'>{item.title}</h5>
         <p className='text-headingSecondary text-14'>{item.short_desc}</p>
-        <span className='text-link hover:text-accent font-semibold transition-all'>
-          <Link href={`/program/${item.slug}?sId=${item.id}`}>
-            <span className='flex items-center learn-more-arrow'>
-              <span> Learn more &nbsp; </span>
-              <span className='arrow'>
-                <RightArrow />
-              </span>
-            </span>
-          </Link>
-        </span>
+        <LearnMore slug={item.slug} id={item.id} />
       </div>
     );
   });
