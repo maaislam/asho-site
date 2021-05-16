@@ -11,7 +11,7 @@ const index = ({ post }) => {
 
 export const getServerSideProps = async (context) => {
   const res = await fetch(
-    `http://articlestore.local/wp-json/asho/v1/articles/${context.query.sId}`
+    `http://7f27d0bfce78.ngrok.io/wp-json/asho/v1/articles/${context.query.sId}`
   );
 
   const post = await res.json();

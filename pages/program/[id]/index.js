@@ -23,7 +23,7 @@ const index = ({ program }) => {
 
 export const getServerSideProps = async (context) => {
   const res = await fetch(
-    `http://articlestore.local/wp-json/asho/v1/programs/${context.query.sId}`
+    `http://7f27d0bfce78.ngrok.io/wp-json/asho/v1/programs/${context.query.sId}`
   );
 
   const program = await res.json();
