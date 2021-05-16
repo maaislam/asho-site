@@ -27,7 +27,7 @@ const Layout = (props) => {
 
   useEffect(() => {
     const getData = async () => {
-      const res = await fetch('http://articlestore.local/wp-json/wp/v2/home_contents');
+      const res = await fetch('7f27d0bfce78.ngrok.io/wp-json/wp/v2/home_contents');
 
       const data = await res.json();
 
