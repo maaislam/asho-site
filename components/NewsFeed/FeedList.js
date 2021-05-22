@@ -17,7 +17,7 @@ const FeedList = ({ blogItem }) => {
           <div className='release-date flex justify-between items-center absolute top-0 left-0 w-full px-16 py-10 text-14 bg-background opacity-0 transition-all'>
             <span>{`${date} ${month} ${year}`}</span>
             <FbShareBtn
-              url={`https://musing-sinoussi.netlify.app/post/${item.slug}?sId=${item.id}`}
+              url={`/post/${item.slug}?sId=${item.id}`}
               quote={item.title}
               description={item.short_desc}
             />
@@ -45,9 +45,7 @@ const FeedList = ({ blogItem }) => {
     );
   });
 
-  return (
-    <div className=' flex flex-wrap justify-center items-center'>{renderBlogList}</div>
-  );
+  return <div className=' flex flex-wrap justify-center items-center'>{renderBlogList}</div>;
 };
 
 export default FeedList;

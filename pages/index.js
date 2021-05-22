@@ -8,6 +8,7 @@ import Programs from '../components/Programs';
 import Sectionheader from '../components/Sectionheader';
 
 const Home = ({ programList, blogList }) => {
+  console.log('🚀 ~ file: index.js ~ line 11 ~ Home ~ blogList', blogList);
   return (
     <div>
       <div className='main mb-140'>
@@ -21,10 +22,7 @@ const Home = ({ programList, blogList }) => {
         <CountUpPanel />
       </div>
       <div className='main mb-140'>
-        <Sectionheader
-          heading1='Latest newsfeed.'
-          heading2='Popular blog post we updated'
-        />
+        <Sectionheader heading1='Latest newsfeed.' heading2='Popular blog post we updated' />
         <FeedList blogItem={blogList} />
       </div>
     </div>
@@ -32,11 +30,11 @@ const Home = ({ programList, blogList }) => {
 };
 
 export const getStaticProps = async () => {
-  const res1 = await fetch('http://7f27d0bfce78.ngrok.io/wp-json/asho/v1/programs');
+  const res1 = await fetch('http://aso-site.atwebpages.com/wp-json/asho/v1/programs');
 
   const programList = await res1.json();
 
-  const res2 = await fetch('http://7f27d0bfce78.ngrok.io/wp-json/asho/v1/articles');
+  const res2 = await fetch('http://aso-site.atwebpages.com/wp-json/asho/v1/articles');
 
   const blogList = await res2.json();
 

@@ -12,8 +12,7 @@ const Layout = (props) => {
 
   const [apiCall, setApiCall] = useState(true);
 
-  const landingText =
-    data.length > 0 && data.filter((item) => item.title.rendered === 'landing block');
+  const landingText = data.length > 0 && data.filter((item) => item.title.rendered === 'landing block');
 
   const ref = useRef();
 
@@ -27,7 +26,7 @@ const Layout = (props) => {
 
   useEffect(() => {
     const getData = async () => {
-      const res = await fetch('http://7f27d0bfce78.ngrok.io/wp-json/wp/v2/home_contents');
+      const res = await fetch('http://aso-site.atwebpages.com/wp-json/wp/v2/home_contents');
 
       const data = await res.json();
 
