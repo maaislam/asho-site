@@ -113,16 +113,7 @@ module.exports = {
       container: '0px 0px 25px rgba(54,91,125,0.04)',
     },
 
-    breakpoints: [
-      '480px',
-      '640px',
-      '768px',
-      '1024px',
-      '1260px',
-      '1367px',
-      '1440px',
-      '1600px',
-    ],
+    breakpoints: ['480px', '640px', '768px', '1024px', '1260px', '1367px', '1440px', '1600px'],
     // variants can use custom, user-defined names
     layout: {
       container: {
@@ -364,6 +355,8 @@ module.exports = {
       },
       minHeight: {
         245: '245px',
+        75: '75vh',
+        50: '50vh',
       },
       borderRadius: {
         10: '10px',
