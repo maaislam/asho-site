@@ -12,6 +12,7 @@ const Seo = ({ title, description, pageUrl, imgUrl }) => {
       <meta property='og:title' content={title} />
       <meta property='og:description' content={description} />
       <meta property='og:image' content={imgUrl} />
+      <meta property='og:image:secure_url' content={imgUrl} />
       <link rel='icon' href='/favicon.ico' />
       <title>{title}</title>
     </Head>
