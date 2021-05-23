@@ -1,4 +1,5 @@
 import React from 'react';
+import { server } from '../../config';
 import useDateFormatter from '../../hooks/useDateFormatter';
 import FbShareBtn from '../Button/FbShareBtn';
 import LearnMore from '../Button/LearnMore';
@@ -17,7 +18,7 @@ const FeedList = ({ blogItem }) => {
           <div className='release-date flex justify-between items-center absolute top-0 left-0 w-full px-16 py-10 text-14 bg-background opacity-0 transition-all'>
             <span>{`${date} ${month} ${year}`}</span>
             <FbShareBtn
-              url={`https://musing-sinoussi.netlify.app/post/${item.slug}?sId=${item.id}`}
+              url={`${server}/post/${item.slug}?sId=${item.id}`}
               quote={item.title}
               description={item.short_desc}
             />
@@ -32,15 +33,6 @@ const FeedList = ({ blogItem }) => {
         <div className='learn-more mt-10 flex justify-center'>
           <LearnMore page='post' slug={item.slug} id={item.id} />
         </div>
-        <style jsx>{`
-          .featuredImg {
-            width: 375px;
-            height: 300px;
-            min-height: 300px;
-            transition: all 0.5s;
-            transform: scale(1);
-          }
-        `}</style>
       </div>
     );
   });
