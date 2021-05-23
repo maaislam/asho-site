@@ -6,6 +6,7 @@ import useOnScreen from '../hooks/useOnScreen';
 import { StickyHeaderContext } from '../context/StickyHeaderContext';
 import LandingBlock from './LandingBlock';
 import Footer from './Footer';
+import { baseURL } from '../config';
 
 const Layout = (props) => {
   const [data, setData] = useState([]);
@@ -26,7 +27,7 @@ const Layout = (props) => {
 
   useEffect(() => {
     const getData = async () => {
-      const res = await fetch('https://barometric-radar.000webhostapp.com/wp-json/wp/v2/home_contents');
+      const res = await fetch(`${baseURL}/wp-json/wp/v2/home_contents`);
 
       const data = await res.json();
 
