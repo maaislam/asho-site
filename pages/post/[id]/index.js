@@ -22,7 +22,9 @@ const index = ({ post }) => {
 };
 
 export const getServerSideProps = async (context) => {
-  const res = await fetch(`http://aso-site.atwebpages.com/wp-json/asho/v1/articles/${context.query.sId}`);
+  const res = await fetch(
+    `https://barometric-radar.000webhostapp.com/wp-json/asho/v1/articles/${context.query.sId}`
+  );
 
   const post = await res.json();
 

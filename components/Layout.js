@@ -26,7 +26,7 @@ const Layout = (props) => {
 
   useEffect(() => {
     const getData = async () => {
-      const res = await fetch('http://aso-site.atwebpages.com/wp-json/wp/v2/home_contents');
+      const res = await fetch('https://barometric-radar.000webhostapp.com/wp-json/wp/v2/home_contents');
 
       const data = await res.json();
 
