@@ -29,7 +29,7 @@ const Home = ({ programList, blogList }) => {
   );
 };
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const res1 = await fetch('https://barometric-radar.000webhostapp.com/wp-json/asho/v1/programs');
 
   const programList = await res1.json();
