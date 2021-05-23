@@ -4,6 +4,10 @@ import ButtonTemplate from './Button/Button';
 const LandingBlock = ({ headline, tagline, image }) => {
   const linearGradient = 'linear-gradient(to right bottom,rgba(126, 213, 111, 0.8),rgba(40, 180, 131, 0.85))';
 
+  const clickHandler = () => {
+    return;
+  };
+
   return (
     <div
       className={`landing-block ${image ? 'min-h-50' : 'min-h-75'} `}
@@ -20,7 +24,7 @@ const LandingBlock = ({ headline, tagline, image }) => {
         <div className='mb-32'>
           <h4>{tagline}</h4>
         </div>
-        <ButtonTemplate text='contact with us' />
+        <ButtonTemplate text='contact with us' clickHandler={clickHandler} />
       </div>
     </div>
   );

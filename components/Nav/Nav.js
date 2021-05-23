@@ -11,11 +11,10 @@ const Nav = () => {
 
   const renderNavItems = navData.map((item, index) => {
     return (
-      <li
-        key={index}
-        className='bg-transparent text-textSecondary cool-link text-18 font-medium '
-      >
-        <Link href={`/${item.path}`}>{item.label}</Link>
+      <li key={index} className='bg-transparent text-textSecondary cool-link text-18 font-medium '>
+        <Link scroll={false} href={`/#${item.path}`}>
+          {item.label}
+        </Link>
       </li>
     );
   });
@@ -28,7 +27,7 @@ const Nav = () => {
         }`}
       >
         <li className='w-2/5 xl:w-1/2'>
-          <Link href='/'>
+          <Link href='/' scroll={false}>
             <a href='#' className='flex items-center font-semibold text-20'>
               <Image
                 src='/assets/logo.png'
