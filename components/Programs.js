@@ -1,7 +1,6 @@
 import LearnMore from './Button/LearnMore.js';
 
 const Programs = ({ programList }) => {
-  console.log('programList', programList);
   const renderPrograms = programList.map((item) => {
     return (
       <div

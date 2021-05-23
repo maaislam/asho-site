@@ -1,14 +1,11 @@
-import Head from 'next/head';
-import Image from 'next/image';
 import CountUpPanel from '../components/CountUpPanel';
 import FeedList from '../components/NewsFeed/FeedList';
-import SingleFeedCard from '../components/NewsFeed/SingleFeedCard';
 
 import Programs from '../components/Programs';
 import Sectionheader from '../components/Sectionheader';
+import { baseURL } from '../config';
 
 const Home = ({ programList, blogList }) => {
-  console.log('🚀 ~ file: index.js ~ line 11 ~ Home ~ blogList', blogList);
   return (
     <div>
       <div className='main mb-140'>
@@ -30,11 +27,11 @@ const Home = ({ programList, blogList }) => {
 };
 
 export const getServerSideProps = async () => {
-  const res1 = await fetch('https://barometric-radar.000webhostapp.com/wp-json/asho/v1/programs');
+  const res1 = await fetch(`${baseURL}/wp-json/asho/v1/programs`);
 
   const programList = await res1.json();
 
-  const res2 = await fetch('https://barometric-radar.000webhostapp.com/wp-json/asho/v1/articles');
+  const res2 = await fetch(`${baseURL}/wp-json/asho/v1/articles`);
 
   const blogList = await res2.json();
 
