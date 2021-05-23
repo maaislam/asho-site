@@ -5,7 +5,7 @@ import FbShareBtn from '../Button/FbShareBtn';
 import LearnMore from '../Button/LearnMore';
 
 const FeedList = ({ blogItem }) => {
-  const renderBlogList = [...blogItem, ...blogItem, ...blogItem].map((item, i) => {
+  const renderBlogList = blogItem.map((item, i) => {
     const { date, month, year } = useDateFormatter(item.date);
 
     return (
