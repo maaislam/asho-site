@@ -1,8 +1,9 @@
 import { useRouter } from 'next/router';
-import parse from 'html-react-parser';
 import Seo from '../../../components/Seo';
+import parse from 'html-react-parser';
 
 const index = ({ program }) => {
+  console.log('🚀 ~ file: index.js ~ line 6 ~ index ~ program', program);
   const router = useRouter();
 
   return (
