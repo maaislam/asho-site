@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import ButtonBasic from '../components/Button/ButtonBasic';
 
 import CountUpPanel from '../components/CountUpPanel';
 import FeedList from '../components/NewsFeed/FeedList';

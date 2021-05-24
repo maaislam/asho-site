@@ -1,3 +1,4 @@
+import ButtonBasic from './Button/ButtonBasic.js';
 import LearnMore from './Button/LearnMore.js';
 
 const Programs = ({ programList }) => {
@@ -16,8 +17,9 @@ const Programs = ({ programList }) => {
   });
 
   return (
-    <div className='flex flex-wrap justify-center bg-background shadow-container rounded-10 py-40'>
-      {renderPrograms}
+    <div className='flex flex-col items-center bg-background shadow-container rounded-10 py-40'>
+      <div className='flex flex-wrap justify-center mb-16'>{renderPrograms}</div>
+      <ButtonBasic url='/programs' text='View All' />
     </div>
   );
 };

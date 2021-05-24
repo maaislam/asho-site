@@ -4,4 +4,4 @@ export const baseURL = dev
   ? 'https://barometric-radar.000webhostapp.com'
   : 'https://barometric-radar.000webhostapp.com';
 
-export const server = dev ? 'http://localhost:3000' : 'https://musing-sinoussi.netlify.app/';
+export const server = dev ? 'http://localhost:3000' : 'https://aso-bd.netlify.app/';
