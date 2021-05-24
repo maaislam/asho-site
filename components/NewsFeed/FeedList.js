@@ -41,7 +41,7 @@ const FeedList = ({ blogItem }) => {
   return (
     <div className='flex flex-col items-center'>
       <div className=' flex flex-wrap justify-center items-center mb-16'>{renderBlogList}</div>
-      <ButtonBasic url='/posts' text='View All' />
+      <ButtonBasic url='/posts' text='See more' />
     </div>
   );
 };
