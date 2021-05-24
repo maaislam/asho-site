@@ -32,7 +32,7 @@ const FeedList = ({ blogItem }) => {
           <div className='short-desc px-16 pt-10 opacity-70'>{item.short_desc}</div>
         </div>
         <div className='learn-more mt-10 flex justify-center'>
-          <LearnMore page='post' slug={item.slug} id={item.id} />
+          <LearnMore page='posts' slug={item.slug} id={item.id} />
         </div>
       </div>
     );

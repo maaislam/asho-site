@@ -11,7 +11,7 @@ const Programs = ({ programList }) => {
         <img src={item.img_url.medium} alt={item.title} />
         <h5 className='text-text font-semibold'>{item.title}</h5>
         <p className='text-headingSecondary text-14'>{item.short_desc}</p>
-        <LearnMore page='program' slug={item.slug} id={item.id} />
+        <LearnMore page='programs' slug={item.slug} id={item.id} />
       </div>
     );
   });
